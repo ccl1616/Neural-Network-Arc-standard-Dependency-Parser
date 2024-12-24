@@ -10,7 +10,7 @@ This project implements a feed-forward neural network to predict transitions in 
     Embedding layer (128 dimensions)
     Hidden layer (128 units) with ReLU activation
     Output layer (91 units) for transition predictions
-![IMG_5798203FB80C-1](https://hackmd.io/_uploads/r1JYA5OSyl.jpg)
+    ![IMG_5798203FB80C-1](https://hackmd.io/_uploads/ryW1vourJl.jpg)
 
 
 2. CrossEntropyLoss for training
