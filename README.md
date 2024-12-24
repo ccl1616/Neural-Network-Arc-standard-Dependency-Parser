@@ -5,16 +5,18 @@ This project implements a feed-forward neural network to predict transitions in 
 ## Algorithm & Techniques Used
 1. Neural Network Architecture
 
-    Feed-forward neural network with:
+    I used a feed-forward neural network with:
 
-    Embedding layer (128 dimensions)
-    Hidden layer (128 units) with ReLU activation
-    Output layer (91 units) for transition predictions
-    ![IMG_5798203FB80C-1](https://hackmd.io/_uploads/ryW1vourJl.jpg)
+* Embedding layer (128 dimensions)
+* Hidden layer (128 units) with ReLU activation
+* Output layer (91 units) for transition predictions
+* ![IMG_5798203FB80C-1](https://hackmd.io/_uploads/ryW1vourJl.jpg)
+
 
 
 2. CrossEntropyLoss for training
-Adagrad optimizer with learning rate 0.01
+
+    Adagrad optimizer with learning rate 0.01
 
 3. Parser Features
 
@@ -27,9 +29,9 @@ Adagrad optimizer with learning rate 0.01
     [Arc-standard transition-based dependency parsing](https://web.stanford.edu/~jurafsky/slp3/old_oct19/15.pdf) is a method where a sentence's syntactic structure is built incrementally using a sequence of transitions (shift/reduce operations). The parser maintains a stack and buffer, and at each step decides whether to shift a word onto the stack or create a dependency arc between words on the stack. The resulting structure is a directed tree where nodes are the words of the sentence, and edges represent the grammatical relationships between those words.
     
     Greedy decoding includes following validity constraints:
-    Arc operations require non-empty stack
-    Root node cannot be target of left-arc
-    Buffer must be empty before final reduce
+    * Arc operations require non-empty stack
+    * Root node cannot be target of left-arc
+    * Buffer must be empty before final reduce
     ![](https://miro.medium.com/v2/resize:fit:1400/1*mfcStHLTzMZC1evPaSJaag.png)
 [Resource](https://towardsdatascience.com/natural-language-processing-dependency-parsing-cf094bbbe3f7)
 
